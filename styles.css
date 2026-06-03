@@ -424,21 +424,26 @@ header .subtitle {
 .contact-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
 .contact-card-premium {
   background: rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
-  padding: 50px 40px;
+  padding: 40px 30px;
   border-radius: 24px;
   text-align: center;
   width: 100%;
-  max-width: 500px;
+  max-width: 350px;
   transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   border: 1px solid rgba(255, 255, 255, 0.25);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .contact-card-premium:hover {
@@ -448,22 +453,16 @@ header .subtitle {
   border-color: rgba(255, 255, 255, 0.35);
 }
 
-.contact-avatar {
-  font-size: 5rem;
-  color: var(--white);
-  margin-bottom: 1.5rem;
-  display: inline-block;
-}
-
 .contact-card-premium h3 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   margin-bottom: 0.2rem;
   font-weight: 700;
   letter-spacing: 0.5px;
+  color: var(--white);
 }
 
 .contact-card-premium .role {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #ffd166;
   margin-bottom: 1.5rem;
   font-weight: 600;
@@ -472,25 +471,10 @@ header .subtitle {
 }
 
 .contact-card-premium .phone-number {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   margin-bottom: 2rem;
   font-weight: 700;
-}
-
-.contact-card-premium .phone-number i {
-  font-size: 1.3rem;
-  margin-right: 8px;
-  color: #ffd166;
-}
-
-.contact-card-premium .phone-number a {
   color: var(--white);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.contact-card-premium .phone-number a:hover {
-  color: #ffd166;
 }
 
 .contact-actions {
@@ -499,7 +483,7 @@ header .subtitle {
   gap: 15px;
 }
 
-.btn-whatsapp, .btn-call {
+.btn-whatsapp {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -511,9 +495,6 @@ header .subtitle {
   font-weight: 600;
   transition: all 0.3s ease;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.btn-whatsapp {
   background-color: var(--whatsapp-color);
   color: var(--white);
 }
@@ -522,17 +503,6 @@ header .subtitle {
   background-color: var(--whatsapp-hover);
   transform: scale(1.02);
   box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
-}
-
-.btn-call {
-  background-color: var(--white);
-  color: var(--primary-color);
-}
-
-.btn-call:hover {
-  background-color: #f2f7f4;
-  transform: scale(1.02);
-  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.15);
 }
 
 /* Footer */
