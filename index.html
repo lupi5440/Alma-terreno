@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terrenos en Venta - Barrio de San Miguel, Zumpango</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-map-marked-alt"></i> Terrenos en Venta</h1>
+            <p class="subtitle">Oportunidad única en Barrio de San Miguel, Zumpango</p>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="badge-accent">¡OPORTUNIDAD DE INVERSIÓN!</span>
+            <h2>600 m² Totales</h2>
+            <p class="hero-desc">Se venden dos terrenos colindantes (400 m² y 200 m²)</p>
+            <p class="hero-warning"><i class="fas fa-exclamation-triangle"></i> No se venden por separado</p>
+            <p class="price">$1,250,000 MXN</p>
+            <div class="price-terms-short">
+                <span class="term-item"><i class="fas fa-check-circle"></i> Descuento al contado</span>
+                <span class="term-item"><i class="fas fa-calendar-alt"></i> Pago a plazos (máx. 3 meses)</span>
+            </div>
+            <a href="#contacto" class="btn-primary">Contactar por WhatsApp</a>
+        </div>
+    </section>
+
+    <!-- Características -->
+    <section class="features">
+        <div class="container">
+            <h2>Características de los Terrenos</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-ruler-combined"></i>
+                    <h3>Superficie</h3>
+                    <p>600 m² en total (2 terrenos colindantes de 400 m² y 200 m²)</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-file-contract"></i>
+                    <h3>Escrituras</h3>
+                    <p>Cuentan con escrituras individuales y propiedad en regla</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Servicios</h3>
+                    <p>Listos para solicitarse (agua, luz y drenaje a pie de calle)</p>
+                </div>
+                <div class="feature-card highlight-card">
+                    <i class="fas fa-ban"></i>
+                    <h3>Venta Conjunta</h3>
+                    <p>Se venden los dos terrenos colindantes juntos (No por separado)</p>
+                </div>
+                <div class="feature-card payment-card">
+                    <i class="fas fa-hand-holding-usd"></i>
+                    <h3>Condiciones de Pago</h3>
+                    <p><strong>Al Contado:</strong> El precio se puede mejorar.<br><strong>A Plazos:</strong> Incremento en precio (plazo máximo de 3 meses).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería -->
+    <section class="gallery">
+        <div class="container">
+            <h2>Galería de Imágenes</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" onclick="openModal(0)">
+                    <img src="IMG/Terreno-.jpeg" alt="Terreno 1">
+                    <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item" onclick="openModal(1)">
+                    <img src="IMG/Terreno-1.jpeg" alt="Terreno 2">
+                    <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item" onclick="openModal(2)">
+                    <img src="IMG/Terreno-2.jpeg" alt="Terreno 3">
+                    <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item" onclick="openModal(3)">
+                    <img src="IMG/Terreno-3.jpeg" alt="Terreno 4">
+                    <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item" onclick="openModal(4)">
+                    <img src="IMG/Terreno-5.jpeg" alt="Terreno 5">
+                    <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item" onclick="openModal(5)">
+                    <img src="IMG/Terreno-6.jpeg" alt="Terreno 6">
+                    <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item" onclick="openModal(6)">
+                    <img src="IMG/Terreno-7.jpeg" alt="Terreno 7">
+                    <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item" onclick="openModal(7)">
+                    <img src="IMG/Terreno-8.jpeg" alt="Terreno 8">
+                    <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item" onclick="openModal(8)">
+                    <img src="IMG/Terreno-9.jpeg" alt="Terreno 9">
+                    <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item" onclick="openModal(9)">
+                    <img src="IMG/Terreno-10.jpeg" alt="Terreno 10">
+                    <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal para imagen ampliada -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+        <button class="next" onclick="changeImage(1)">&#10095;</button>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
+
+    <!-- Ubicación -->
+    <section class="location">
+        <div class="container">
+            <h2>Ubicación</h2>
+            <p class="location-text">
+                <i class="fas fa-map-marker-alt"></i> Calle Prolongación 5to Callejón de Uruguay, Números Oficiales 5 y 9, Barrio de San Miguel, Municipio de Zumpango, Estado de México
+            </p>
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120237.01516486743!2d-99.15290634775162!3d19.79654789537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f48c2e8c6f7f%3A0x8f8f8f8f8f8f8f8f!2sZumpango%2C%20M%C3%A9x.!5e0!3m2!1ses!2smx!4v1234567890"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <h2>Información de Contacto</h2>
+            <div class="contact-container">
+                <div class="contact-card-premium">
+                    <div class="contact-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h3>Araceli Carreño Rodríguez</h3>
+                    <p class="role">Contacto de Ventas</p>
+                    <p class="phone-number">
+                        <i class="fas fa-phone-alt"></i> <a href="tel:+525510119421">55 1011 9421</a>
+                    </p>
+                    <div class="contact-actions">
+                        <a href="https://wa.me/525510119421" target="_blank" class="btn-whatsapp">
+                            <i class="fab fa-whatsapp"></i> Chat de WhatsApp
+                        </a>
+                        <a href="tel:+525510119421" class="btn-call">
+                            <i class="fas fa-phone"></i> Llamar Directo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
